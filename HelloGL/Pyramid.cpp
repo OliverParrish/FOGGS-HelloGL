@@ -1,7 +1,7 @@
 #include "Pyramid.h"
 
 
-Pyramid::Pyramid(Mesh* mesh, float x, float y, float z) : SceneObject(mesh)
+Pyramid::Pyramid(Mesh* mesh, float x, float y, float z) : SceneObject(mesh, nullptr)
 {
 	//rotationSpeed = rand() % 5 + 0.5f;
 	//_rotation = rand() % 90;

@@ -9,6 +9,7 @@ namespace MeshLoader
 	void LoadVertices(ifstream& inFile, Mesh& mesh);
 	void LoadColours(ifstream& inFile, Mesh& mesh);
 	void LoadIndices(ifstream& inFile, Mesh& mesh);
+	void LoadUVs(ifstream& inFile, Mesh& mesh);
 
 	void LoadVertices(ifstream& inFile, Mesh& mesh)
 	{
@@ -29,7 +30,7 @@ namespace MeshLoader
 
 	void LoadColours(ifstream& inFile, Mesh& mesh)
 	{
-		//TODO: LOAD COLOURS
+		//LOAD COLOURS
 		inFile >> mesh.ColorCount;
 
 		if (mesh.ColorCount > 0)
@@ -47,7 +48,7 @@ namespace MeshLoader
 
 	void LoadIndices(ifstream& inFile, Mesh& mesh)
 	{
-		//TODO: Load Indices
+		//Load Indices
 		inFile >> mesh.IndexCount;
 
 		if (mesh.IndexCount > 0)
@@ -57,6 +58,22 @@ namespace MeshLoader
 			for (int i = 0; i < mesh.IndexCount; i++)
 			{
 				inFile >> mesh.Indices[i];
+			}
+		}
+	}
+
+	void LoadUVs(ifstream& inFile, Mesh& mesh)
+	{
+		inFile >> mesh.TexCoordsCount;
+
+		if (mesh.TexCoordsCount > 0)
+		{
+			mesh.TexCoords = new TexCoord[mesh.TexCoordsCount];
+
+			for (int i = 0; i < mesh.TexCoordsCount; i++)
+			{
+				inFile >> mesh.TexCoords[i].u;
+				inFile >> mesh.TexCoords[i].v;
 			}
 		}
 	}
@@ -80,6 +97,29 @@ namespace MeshLoader
 
 		LoadColours(inFile, *mesh);
 
+		LoadIndices(inFile, *mesh);
+
+		return mesh;
+	}
+
+	Mesh* LoadTextured(char* path)
+	{
+		Mesh* mesh = new Mesh();
+
+		ifstream inFile;
+
+		inFile.open(path);
+
+		if (!inFile.good())
+		{
+			cerr << "Can't open texture file " << path << endl;
+			return nullptr;
+		}
+
+		//LOAD DATA USING METHODS ABOVE
+		LoadVertices(inFile, *mesh);
+		LoadColours(inFile, *mesh);
+		LoadUVs(inFile, *mesh);
 		LoadIndices(inFile, *mesh);
 
 		return mesh;

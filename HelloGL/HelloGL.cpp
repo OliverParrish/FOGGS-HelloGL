@@ -16,6 +16,7 @@ void HelloGL::InitGL(int argc, char* argv[])
 {
 	GLUTCallbacks::Init(this);
 
+	//dont put before this
 	glutInit(&argc, argv);
 
 	glutInitDisplayMode(GLUT_DOUBLE);
@@ -35,6 +36,7 @@ void HelloGL::InitGL(int argc, char* argv[])
 	gluPerspective(45, 1, 0.1, 1000);
 	glMatrixMode(GL_MODELVIEW);
 
+	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	glEnable(GL_DEPTH_TEST);
@@ -48,12 +50,15 @@ void HelloGL::InitObjects()
 	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 	rotation = 0.0f;
 
-	Mesh* cubeMesh = MeshLoader::Load((char*)"FileReader/cube.txt");
-	Mesh* pyramidMesh = MeshLoader::Load((char*)"FileReader/pyramid.txt");
+	Mesh* cubeMesh = MeshLoader::LoadTextured((char*)"FileReader/cube.txt");
+	Mesh* pyramidMesh = MeshLoader::LoadTextured((char*)"FileReader/pyramid.txt");
+
+	Texture2D* texture = new Texture2D();
+	texture->Load((char*)"RAW/Penguins.raw", 512, 512);
 
 	for (int i = 0; i < (CUBENUM / 2); i++)
 	{
-		objects[i] = new Cube(cubeMesh,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);	
+		objects[i] = new Cube(cubeMesh, texture,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);	
 	}
 
 	for (int i = (CUBENUM / 2); i < CUBENUM; i++)

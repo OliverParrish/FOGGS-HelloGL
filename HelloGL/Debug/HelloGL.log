@@ -1,2 +1,4 @@
-﻿  Pyramid.cpp
-  HelloGL.vcxproj -> C:\Users\p012397i\OneDrive - Staffordshire University\Fundimentals of Graphical And Game System\Semester 2\HelloGL\Debug\HelloGL.exe
+﻿  HelloGL.cpp
+C:\Users\p012397i\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(72): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
+C:\Users\p012397i\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(72): warning C4154: deletion of an array expression; conversion to pointer supplied
+  HelloGL.vcxproj -> C:\Users\p012397i\Documents\GitHub\FOGGS-HelloGL\Debug\HelloGL.exe
