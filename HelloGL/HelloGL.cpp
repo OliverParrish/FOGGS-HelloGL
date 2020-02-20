@@ -54,7 +54,7 @@ void HelloGL::InitObjects()
 	Mesh* pyramidMesh = MeshLoader::LoadTextured((char*)"FileReader/pyramid.txt");
 
 	Texture2D* texture = new Texture2D();
-	texture->Load((char*)"RAW/Penguins.raw", 512, 512);
+	texture->Load((char*)"RAW/Face.raw", 1024, 1024);
 
 	for (int i = 0; i < (CUBENUM / 2); i++)
 	{
