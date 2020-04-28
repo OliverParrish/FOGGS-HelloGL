@@ -65,3 +65,7 @@ void Cube::Update()
 		_position.z = -50.0f;
 	}
 }
+
+void Cube::Keyboard(unsigned char key, int x, int y)
+{
+}

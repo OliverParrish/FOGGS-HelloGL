@@ -3,8 +3,8 @@
 
 Pyramid::Pyramid(Mesh* mesh, float x, float y, float z) : SceneObject(mesh, nullptr)
 {
-	//rotationSpeed = rand() % 5 + 0.5f;
-	//_rotation = rand() % 90;
+	rotationSpeed = rand() % 5 + 0.5f;
+	_rotation = rand() % 90;
 
 	_position.x = x;
 	_position.y = y;
@@ -27,7 +27,7 @@ void Pyramid::Draw()
 		glPushMatrix();
 
 		glTranslatef(_position.x, _position.y, _position.z);
-		/*glRotatef(_rotation, rotationSpeed, rotationSpeed, rotationSpeed);*/
+		glRotatef(_rotation, rotationSpeed, rotationSpeed, rotationSpeed);
 
 		glDrawElements(GL_TRIANGLES, _mesh->IndexCount, GL_UNSIGNED_SHORT, _mesh->Indices);
 		glPopMatrix();
@@ -39,8 +39,19 @@ void Pyramid::Draw()
 
 void Pyramid::Update()
 {
-	/*_rotation += rotationSpeed;
 
 	if (_rotation >= 360)
-		_rotation = 0;*/
+		_rotation = 0;
+	else if (_rotation <= -360)
+	{
+		_rotation = 0;
+	}
+}
+
+void Pyramid::Keyboard(unsigned char key, int x, int y)
+{
+	if (key == 'd')
+		_rotation += rotationSpeed;
+	if (key == 'a')
+		_rotation -= rotationSpeed;
 }

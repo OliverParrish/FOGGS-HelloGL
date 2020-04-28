@@ -17,4 +17,6 @@ public:
 	void Draw();
 	void Update();
 
+	void Keyboard(unsigned char key, int x, int y);
+
 };

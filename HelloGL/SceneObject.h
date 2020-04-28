@@ -21,4 +21,6 @@ public:
 	virtual void Update();
 	virtual void Draw();
 
+	virtual void Keyboard(unsigned char key, int x, int y);
+
 };

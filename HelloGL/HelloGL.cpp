@@ -2,6 +2,8 @@
 #include "Cube.h"
 #include "Pyramid.h"
 
+#include <ft2build.h>
+#include FT_FREETYPE_H
 
 HelloGL::HelloGL(int argc, char* argv[])
 {
@@ -101,11 +103,11 @@ void HelloGL::Update()
 
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
+	for (int i = 0; i < CUBENUM; i++)
+	{
+		objects[i]->Keyboard(key, x, y);
+	}
 
-	if (key == 'd')
-		rotation += 5.0f;
-	if (key == 'a')
-		rotation -= 5.0f;
 	if (key == 'k')
 	{
 		camera->eye.z++;

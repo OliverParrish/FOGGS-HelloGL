@@ -20,3 +20,7 @@ void SceneObject::Update()
 void SceneObject::Draw()
 {
 }
+
+void SceneObject::Keyboard(unsigned char key, int x, int y)
+{
+}

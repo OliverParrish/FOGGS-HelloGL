@@ -1,4 +1,3 @@
-﻿  HelloGL.cpp
-C:\Users\p012397i\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(73): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
-C:\Users\p012397i\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(73): warning C4154: deletion of an array expression; conversion to pointer supplied
-  HelloGL.vcxproj -> C:\Users\p012397i\Documents\GitHub\FOGGS-HelloGL\Debug\HelloGL.exe
+﻿  Pyramid.cpp
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Pyramid.cpp(7,21): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+  HelloGL.vcxproj -> C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\Debug\HelloGL.exe
