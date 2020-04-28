@@ -5,6 +5,8 @@
 class Cube : public SceneObject
 {
 private:
+
+	Material* _material;
 	
 	GLfloat _rotation;
 	Vector3 _position;

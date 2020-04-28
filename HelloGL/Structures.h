@@ -54,10 +54,19 @@ struct Material
 struct Mesh
 {
 	Vertex* Vertices;
+	Vector3* Normals;
+	GLushort* Indices;
+	TexCoord* TexCoords;
+	int VertexCount, NormalCount, IndexCount, TexCoordsCount;
+};
+
+/*struct Mesh2
+{
+	Vertex* Vertices;
 	Color* Colors;
 	GLushort* Indices;
 	TexCoord* TexCoords;
 	int VertexCount, ColorCount, IndexCount, TexCoordsCount;
-};
+};*/
 
 

@@ -17,12 +17,12 @@ Pyramid::~Pyramid()
 
 void Pyramid::Draw()
 {
-	if (_mesh->Vertices != nullptr && _mesh->Colors != nullptr && _mesh->Indices != nullptr)
+	if (_mesh->Vertices != nullptr && _mesh->Normals != nullptr && _mesh->Indices != nullptr)
 	{
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_COLOR_ARRAY);
 		glVertexPointer(3, GL_FLOAT, 0, _mesh->Vertices);
-		glColorPointer(3, GL_FLOAT, 0, _mesh->Colors);
+		glColorPointer(3, GL_FLOAT, 0, _mesh->Normals);
 
 		glPushMatrix();
 
@@ -35,7 +35,7 @@ void Pyramid::Draw()
 		glDisableClientState(GL_COLOR_ARRAY);
 		glDisableClientState(GL_VERTEX_ARRAY);
 	}
-}
+} 
 
 void Pyramid::Update()
 {
@@ -50,6 +50,7 @@ void Pyramid::Update()
 
 void Pyramid::Keyboard(unsigned char key, int x, int y)
 {
+	//allows player rotation of pyramids
 	if (key == 'd')
 		_rotation += rotationSpeed;
 	if (key == 'a')

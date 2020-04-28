@@ -6,8 +6,6 @@
 #include "GLUTCallbacks.h"
 #include "Structures.h"
 #include "Cube.h"
-#include "MeshLoader.h"
-
 #define REFRESHRATE 16
 #define CUBENUM 200
 
@@ -26,6 +24,10 @@ public:
 
 	void InitObjects();
 
+	void InitLighting();
+
+	void DrawString(const char* text, Vector3* position, Color color);
+
 	void InitGL(int argc, char* argv[]);
 
 private:
@@ -35,6 +37,9 @@ private:
 	Camera* camera;
 	
 	SceneObject* objects[CUBENUM];
+
+	Vector4* _lightPosition;
+	Lighting* _lightData;
 };
 
 
