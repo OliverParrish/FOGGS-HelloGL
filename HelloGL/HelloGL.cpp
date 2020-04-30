@@ -1,5 +1,4 @@
 #include "HelloGL.h"
-#include "Cube.h"
 #include "Pyramid.h"
 #include "MeshLoader.h"
 

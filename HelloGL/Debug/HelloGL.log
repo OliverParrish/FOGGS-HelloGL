@@ -1,13 +1,29 @@
-﻿  HelloGL.cpp
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(86,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(87,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(88,29): warning C4305: '=': truncation from 'double' to 'float'
+﻿  Cube.cpp
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(10,21): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(43,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(43,58): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(43,87): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(45,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(45,58): warning C4305: '=': truncation from 'double' to 'float'
+  GLUTCallbacks.cpp
+  HelloGL.cpp
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Cube.cpp(45,87): warning C4305: '=': truncation from 'double' to 'float'
 C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(90,29): warning C4305: '=': truncation from 'double' to 'float'
 C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(91,29): warning C4305: '=': truncation from 'double' to 'float'
 C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(92,29): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(94,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(95,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(96,30): warning C4305: '=': truncation from 'double' to 'float'
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(115,16): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
-C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(115,16): warning C4154: deletion of an array expression; conversion to pointer supplied
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(94,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(95,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(96,29): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(98,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(99,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(100,30): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(120,16): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
+  main.cpp
+  MeshLoader.cpp
+  Pyramid.cpp
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\HelloGL.cpp(120,16): warning C4154: deletion of an array expression; conversion to pointer supplied
+  SceneObject.cpp
+  Texture2D.cpp
+  Generating Code...
+C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\HelloGL\Pyramid.cpp(7,21): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
   HelloGL.vcxproj -> C:\Users\olive\Documents\GitHub\FOGGS-HelloGL\Debug\HelloGL.exe
