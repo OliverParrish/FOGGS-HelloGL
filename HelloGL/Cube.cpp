@@ -83,7 +83,7 @@ void Cube::Update()
 
 void Cube::Keyboard(unsigned char key, int x, int y)
 {
-		//allows player rotation of pyramids
+		//allows player rotation of Cubes
 		if (key == 'd')
 			_rotation += rotationSpeed;
 		if (key == 'a')

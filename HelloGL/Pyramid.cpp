@@ -50,7 +50,7 @@ void Pyramid::Update()
 
 void Pyramid::Keyboard(unsigned char key, int x, int y)
 {
-	//allows player rotation of pyramids
+	//allows player rotation of pyramids (pyramids don't load due to new code)
 	if (key == 'd')
 		_rotation += rotationSpeed;
 	if (key == 'a')
