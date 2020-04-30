@@ -68,5 +68,3 @@ struct Mesh
 	TexCoord* TexCoords;
 	int VertexCount, ColorCount, IndexCount, TexCoordsCount;
 };*/
-
-

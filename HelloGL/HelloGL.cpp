@@ -51,18 +51,22 @@ void HelloGL::InitGL(int argc, char* argv[])
 
 void HelloGL::InitObjects()
 {
+	//initializes camera in scene
 	camera = new Camera();
 	camera->eye.x = 0.0f; camera->eye.y = 0.0f; camera->eye.z = 1.0f;
 	camera->center.x = 0.0f; camera->center.y = 0.0f; camera->center.z = 0.0f;
 	camera->up.x = 0.0f; camera->up.y = 1.0f; camera->up.z = 0.0f;
 	rotation = 0.0f;
 
+	//reads cube and pyramids into screne
 	Mesh* cubeMesh = MeshLoader::LoadTextured((char*)"FileReader/NewCube.txt");
 	Mesh* pyramidMesh = MeshLoader::LoadTextured((char*)"FileReader/pyramid.txt");
 
+	//initializes cube texture
 	Texture2D* texture = new Texture2D();
 	texture->Load((char*)"RAW/Face.raw", 1024, 1024);
 
+	//creates random placed cubes and pyramids
 	for (int i = 0; i < (CUBENUM / 2); i++)
 	{
 		objects[i] = new Cube(cubeMesh, texture,((rand() % 400) / 10.0f) - 20.0f, ((rand() % 200) / 10.0f) - 10.0f, -(rand() % 1000) / 10.0f);	
@@ -76,6 +80,7 @@ void HelloGL::InitObjects()
 
 void HelloGL::InitLighting()
 {
+	//initializes lighting 
 	_lightPosition = new Vector4();
 	_lightPosition->x = 0.0;
 	_lightPosition->y = 0.0;
@@ -100,6 +105,7 @@ void HelloGL::InitLighting()
 
 void HelloGL::DrawString(const char* text, Vector3* position, Color color)
 {
+	//draws Text
 	glPushMatrix();
 
 	glTranslatef(position->x, position->y, position->z);
@@ -117,6 +123,7 @@ HelloGL::~HelloGL()
 
 void HelloGL::Display()
 {
+	//draws the cubes in the scene
 	glClear(GL_DEPTH_BUFFER_BIT);
 	glClear(GL_COLOR_BUFFER_BIT);
 	for (int i = 0; i < CUBENUM; i++)
@@ -129,6 +136,7 @@ void HelloGL::Display()
 	Vector3 v = {0.25f, 0.70f, -1.0f };
 	Color c = { 0.0f, 1.0f, 0.0f };
 
+	//displays text (DOESNT DISPLAY)
 	HelloGL::DrawString("Bad 3D Game", &v, c);
 }
 
@@ -142,16 +150,18 @@ void HelloGL::Update()
 	gluLookAt(camera->eye.x, camera->eye.y, camera->eye.z, camera->center.x, camera->center.y, camera->center.z, camera->up.x, camera->up.y, camera->up.z);
 	glutPostRedisplay();
 
+	//updates lighting
 	glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightData->Ambient.x));
 	glLightfv(GL_LIGHT0, GL_AMBIENT, &(_lightPosition->x));
 
-	
+	//updates the rotations
 	if (rotation >= 360.0f)
 		rotation = 0.0f;
 }
 
 void HelloGL::Keyboard(unsigned char key, int x, int y)
 {
+	//keyboard presses to move camera
 	for (int i = 0; i < CUBENUM; i++)
 	{
 		objects[i]->Keyboard(key, x, y);
